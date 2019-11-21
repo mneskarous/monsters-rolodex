@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { CardList } from './components/card-list/card-list.component';
+import { CardList } from './components/card-list/card-list.component';
 import './App.css';
 
 class App extends Component {
@@ -16,13 +16,13 @@ class App extends Component {
       .then(response => response.json())
       .then(users => this.setState({
         monsters: users
-      }, () => console.log(this.state.monsters)));
+      }));
   }
   
   render() {
     return (
       <div className="App">
-        {/* <CardList monsters={this.state.monsters} /> */}
+        <CardList monsters={this.state.monsters} />
       </div>
     );
   }
